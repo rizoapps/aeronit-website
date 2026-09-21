@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files (contains secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+npm-error.log*
+*.log
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+.parcel-cache/
