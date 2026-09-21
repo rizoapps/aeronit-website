@@ -1,0 +1,77 @@
+================================================================================
+GIT PUSH TO GITHUB - AUTHENTICATION INSTRUCTIONS
+================================================================================
+
+Repository: https://github.com/rizoapps/aeronit-website.git
+Branch: main
+
+Your code is ready to push. Choose one of these methods:
+
+--------------------------------------------------------------------------------
+METHOD 1: PERSONAL ACCESS TOKEN (Recommended)
+--------------------------------------------------------------------------------
+
+Step 1: Create a GitHub Personal Access Token
+   - Go to: https://github.com/settings/tokens
+   - Click "Generate new token (classic)"
+   - Token name: "Aeronit Website Deploy"
+   - Select scope: "repo" (full control of private repositories)
+   - Click "Generate token"
+   - COPY THE TOKEN IMMEDIATELY (you won't see it again!)
+
+Step 2: Push to GitHub
+   git push -u origin main
+   
+   When prompted:
+   - Username: your GitHub username (rizoapps)
+   - Password: PASTE THE TOKEN (not your GitHub password!)
+
+--------------------------------------------------------------------------------
+METHOD 2: GIT CREDENTIAL MANAGER (Windows)
+--------------------------------------------------------------------------------
+
+Step 1: Configure Git Credential Manager
+   git credential-manager configure
+
+Step 2: Push to GitHub
+   git push -u origin main
+   
+   A browser window will open for GitHub authentication.
+
+--------------------------------------------------------------------------------
+METHOD 3: SSH (If you have SSH keys set up)
+--------------------------------------------------------------------------------
+
+Step 1: Change remote URL to SSH
+   git remote set-url origin git@github.com:rizoapps/aeronit-website.git
+
+Step 2: Push to GitHub
+   git push -u origin main
+
+--------------------------------------------------------------------------------
+METHOD 4: GITHUB CLI (gh)
+--------------------------------------------------------------------------------
+
+Step 1: Install GitHub CLI
+   winget install GitHub.cli
+
+Step 2: Authenticate
+   gh auth login
+
+Step 3: Push to GitHub
+   git push -u origin main
+
+================================================================================
+AFTER PUSHING - ENABLE GITHUB PAGES
+================================================================================
+
+1. Go to: https://github.com/rizoapps/aeronit-website
+2. Click "Settings" tab
+3. Click "Pages" in left sidebar
+4. Under "Source", select "GitHub Actions"
+5. Wait for deployment (check Actions tab)
+
+Your site will be at:
+https://rizoapps.github.io/aeronit-website/
+
+================================================================================
